@@ -1,5 +1,3 @@
-//
-
 function naiveSearch(array, item) {
 	let ticks = 1;
 	for (let i = 0; i < array.length; i++) {

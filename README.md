@@ -19,11 +19,8 @@ Complexity: Linear
 Exercise: Efficient Search
 Complexity: Logarithmic Time
 
-Exercise:
-Complexity:
+Exercise: Random
+Complexity: Constant
 
-Exercise:
-Complexity:
-
-Exercise:
-Complexity:
+Exercise: Is it Prime
+Complexity: Worst case is Polynomial Time. Is data dependent.

@@ -7,17 +7,17 @@ Complexity: Worst case is Polynomial Time, Best Case is Constant. Is data depend
 Exercise: Doubler
 Complexity: Linear Time
 
-Exercise:
-Complexity:
+Exercise: Native Search
+Complexity: Linear Time, but is very data dependent.
 
-Exercise:
-Complexity:
+Exercise: Creating Pairs
+Complexity: Polynomial Time
 
-Exercise:
-Complexity:
+Exercise: Fibonacci
+Complexity: Linear
 
-Exercise:
-Complexity:
+Exercise: Efficient Search
+Complexity: Logarithmic Time
 
 Exercise:
 Complexity:

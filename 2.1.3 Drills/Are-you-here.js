@@ -23,7 +23,6 @@ function areYouHere(arr1, arr2) {
 
 function getRunTimeOperations(msg, fn, input1, input2) {
 	const { ticks, result } = fn(input1, input2);
-	// prettier-ignore
 	console.log(
 		`Test ${msg}; With input of size ${input1.length} and ${input2.length}, ${fn.name} ` +
 			`clocked ${ticks} ticks to generate result of ${result}.`

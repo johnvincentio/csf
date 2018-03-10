@@ -44,7 +44,6 @@ function howManyLessThanNitems(arr, n) {
 function getRunTimeOperations(fn, input) {
 	const { arr, n } = input;
 	const { ticks, result } = fn(arr, n);
-	// prettier-ignore
 	console.log(
 		`With input of size ${arr.length}, ${fn.name} ` + `clocked ${ticks} ticks to generate result of ${result}.`
 	);

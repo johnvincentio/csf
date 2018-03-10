@@ -19,7 +19,6 @@ function hasDuplicates(array) {
 
 function getRunTimeOperations(fn, input) {
 	const { ticks, result } = fn(input);
-	// prettier-ignore
 	console.log(
 		`With input of size ${input.length}, ${fn.name} ` + `clocked ${ticks} ticks to generate result of ${result}.`
 	);

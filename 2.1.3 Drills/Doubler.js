@@ -14,7 +14,6 @@ function doubleArrayValues(array) {
 
 function getRunTimeOperations(msg, fn, input) {
 	const { ticks, result } = fn(input);
-	// prettier-ignore
 	console.log(
 		`Test ${msg}; With input of size ${input.length}, ${fn.name} ` +
 			`clocked ${ticks} ticks to generate result of ${result}.`

@@ -1,26 +1,26 @@
 Exercise: Even or odd
-Complexity: Constant Time
+Complexity: Constant Time complexity
 
 Exercise: Are you here
-Complexity: Worst case is Polynomial Time, Best Case is Constant. Is data dependent.
+Complexity: Worst case is Polynomial Time complexity, Best Case is Constant complexity. Is data dependent.
 
 Exercise: Doubler
-Complexity: Linear Time
+Complexity: Linear Time complexity
 
 Exercise: Native Search
-Complexity: Linear Time, but is very data dependent.
+Complexity: Linear Time complexity, but is very data dependent.
 
 Exercise: Creating Pairs
-Complexity: Polynomial Time
+Complexity: Polynomial Time complexity
 
 Exercise: Fibonacci
-Complexity: Linear
+Complexity: Linear Time complexity
 
 Exercise: Efficient Search
-Complexity: Logarithmic Time
+Complexity: Logarithmic Time complexity
 
 Exercise: Random
-Complexity: Constant
+Complexity: Constant Time complexity
 
 Exercise: Is it Prime
-Complexity: Worst case is Polynomial Time. Is data dependent.
+Complexity: Worst case is Linear Time complexity. Is data dependent.

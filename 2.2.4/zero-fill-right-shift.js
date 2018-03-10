@@ -20,27 +20,24 @@ function zeroFillRightShift(num, shift) {
 	return num >>> shift;
 }
 
-function test(shift) {
-	console.log("Shift ", shift);
-	let test = 0;
-	do {
-		test++;
-		let right = rightShift(test, shift);
-		console.log(`exercise; test ${test}, ${test.toString(2)} right ${right}, ${right.toString(2)}`);
-	} while (test < 20);
+function exercise(item, shift) {
+	let left = leftShift(item, shift);
+	let right = rightShift(item, shift);
+	let zero = zeroFillRightShift(item, shift);
+	// prettier-ignore
+	console.log(
+		`shift ${shift}, (item ${item}, ${item.toString(2)}) (left ${left}, ${left.toString(2)}} (right ${right}, ${right.toString(2)}) (zero ${zero}, ${zero.toString(2)})`
+	);
 }
 
-// let shift = 0;
-// do {
-// 	test(++shift);
-// } while (shift < 5);
-
-let arr = [-1000000, -30000, -1, 1, 10, 25, 100, 30000, 60000, 100000000000];
+let arr1 = [-1000000, -30000, -1, 1, 10, 25, 100, 30000, 60000, 100000000000];
+let arr = [0, 1, 2, 10, 255, 256, -1];
 arr.map(item => {
-	let shift = 0;
+	let shift = 2;
 	do {
-		let result = rightShift(item, shift);
-		console.log(`shift ${shift}, item ${item}, ${item.toString(2)} result ${result}, ${result.toString(2)}`);
+		exercise(item, shift);
 		shift++;
-	} while (shift < 5);
+	} while (shift < 3);
 });
+
+exercise(11, 4);

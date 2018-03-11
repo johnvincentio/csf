@@ -22,6 +22,10 @@ if (a15_48 !== actual) {
 	console.error("ERROR; a15_48 ", a15_48, " should be ", actual);
 }
 
+/*
+calculate the masks
+*/
+
 const mask = [];
 for (let j = 0; j < 20; j++) {
 	mask[j] = Math.pow(2, j);
@@ -41,6 +45,9 @@ function setBit(num, bit) {
 	return num | mask[bit - 1];
 }
 
+/*
+transform a number
+*/
 function transform(num, move) {
 	let result = 0;
 	for (let i = 1; i < 18; i++) {

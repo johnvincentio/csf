@@ -9,3 +9,6 @@ Complexity: Linear Time Complexity
 
 Exercise: Naive Search
 Complexity: Data Dependent. Linear Time complexity
+
+Exercise: Creating Pairs
+Complexity: Polynomial Time complexity

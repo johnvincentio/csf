@@ -21,3 +21,6 @@ Complexity: Logarithmic Time Complexity
 
 Exercise: Random Element
 Complexity: Constant Time Complexity
+
+Exercise: Is It Prime
+Complexity: Worst Case, Linear Time Complexity

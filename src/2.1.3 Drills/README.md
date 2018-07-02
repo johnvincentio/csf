@@ -15,3 +15,9 @@ Complexity: Polynomial Time complexity
 
 Exercise: Computing fibonaccis
 Complexity: Linear Time Complexity
+
+Exercise: Efficient Search
+Complexity: Logarithmic Time Complexity
+
+Exercise: Random Element
+Complexity: Constant Time Complexity

@@ -3,19 +3,18 @@
 /* eslint-disable no-plusplus, no-bitwise, no-console, no-restricted-properties */
 
 /*
-Write a function which divides an integer by two, rounding down.
+Write a function which calculates 2^n
 */
 
-function rightShift(num, shift) {
-	return num >> shift;
+function leftShift(num, shift) {
+	return num << shift;
 }
 
-function divideByTwo(num) {
-	const result = rightShift(num, 1);
-	console.log(`num ${num} ${num.toString(2)} result ${result}, ${result.toString(2)}`);
+function exercise(shift) {
+	const result = leftShift(1, shift);
+	console.log(`shift ${shift} result ${result}, ${result.toString(2)}`);
 }
 
-const arr = [-1000000, -30000, -1, 1, 0, 1, 2, 10, 25, 100, 255, 256, 30000, 60000, 100000000000];
-arr.map(item => {
-	divideByTwo(item);
-});
+for (let i = 0; i < 5; i++) {
+	exercise(i);
+}

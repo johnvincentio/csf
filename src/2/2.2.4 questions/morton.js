@@ -7,6 +7,19 @@ Write a function which calculates the Morton Number from two 8-bit integers.
 
 In a Morton Number, the bits of two numbers are interleaved.
 So if your inputs were: 15 (00001111) and 48 (00110000), your output would be 1450 (0000010110101010).
+
+const num1 = 15;
+// 00001111
+// 76543210
+const num2 = 48;
+// 00110000
+// 76543210
+const actual = 1450;
+// const bActual = 0b0000010110101010;
+// 0000010110101010;
+//  0  0  0  0  0  1  0  1  1  0  1  0  1  0  1  0
+// A7 B7 A6 B6 A5 B5 A4 B4 A3 B3 A2 B2 A1 B1 A0 B0
+//  0  0  0  0  0  1  0  1  1  0  1  0  1  0  1  0
 */
 
 function isSet(num, bitPosition) {
@@ -47,17 +60,8 @@ function morton(num1, num2) {
 }
 
 const num1 = 15;
-// 00001111
-// 76543210
 const num2 = 48;
-// 00110000
-// 76543210
 const actual = 1450;
-// const bActual = 0b0000010110101010;
-// 0000010110101010;
-//  0  0  0  0  0  1  0  1  1  0  1  0  1  0  1  0
-// A7 B7 A6 B6 A5 B5 A4 B4 A3 B3 A2 B2 A1 B1 A0 B0
-//  0  0  0  0  0  1  0  1  1  0  1  0  1  0  1  0
 
 const total = morton(num1, num2);
 if (total !== actual) {

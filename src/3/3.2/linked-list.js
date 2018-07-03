@@ -13,6 +13,31 @@ class LinkedList {
 		this.head = null;
 	}
 
+	createLoop() {
+		this.insert(0, 'A');
+		this.insert(1, 'B');
+		this.insert(2, 'C');
+		this.insert(3, 'D');
+		this.insert(4, 'E');
+		const node1 = this.find(1);
+		const node3 = this.find(3);
+		node3.next = node1;
+	}
+
+	checkLoop() {
+		for (let i = 0; i < this.length; i++) {
+			const node = this.find(i);
+			node.checked = false;
+		}
+		for (let i = 0; i < this.length; i++) {
+			const node = this.find(i);
+			if (node.checked) {
+				console.log(`Found a loop at index ${i} value ${node.value}`);
+			}
+			node.checked = true;
+		}
+	}
+
 	reverse() {
 		const index = this.length - 1;
 		let pos = 0;

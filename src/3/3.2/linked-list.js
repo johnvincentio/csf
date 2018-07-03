@@ -13,6 +13,11 @@ class LinkedList {
 		this.head = null;
 	}
 
+	thirdFromEndElement() {
+		const total = this.calculateNodes();
+		return total < 3 ? null : this.get(total - 3);
+	}
+
 	middleElement() {
 		const total = this.calculateNodes();
 		return total === 0 ? null : this.get((total - 1) / 2);

@@ -3,8 +3,7 @@
 /* eslint-disable no-plusplus, no-bitwise, no-console, no-restricted-properties */
 
 /*
-Write an algorithm to find the third element from the end of a linked 
-list without using the .length property
+Write an algorithm to reverse a linked list
 */
 
 const LinkedList = require('./linked-list.js');

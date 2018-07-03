@@ -29,6 +29,14 @@ function test1b() {
 	linkedList.list();
 }
 
+function test1c() {
+	const linkedList = new LinkedList();
+	linkedList.load(['X', 'Y']);
+	linkedList.reverse();
+	linkedList.list();
+}
+
 test1();
-// test1a();
-// test1b();
+test1a();
+test1b();
+test1c();

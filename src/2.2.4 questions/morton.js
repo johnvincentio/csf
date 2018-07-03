@@ -9,21 +9,37 @@ In a Morton Number, the bits of two numbers are interleaved.
 So if your inputs were: 15 (00001111) and 48 (00110000), your output would be 1450 (0000010110101010).
 */
 
-function isSet(num, bit) {
-	return !!(num & (2 ** bit));
+function isSet(num, bitPosition) {
+	return !!(num & (2 ** bitPosition));
+}
+
+function clearBit(number, bitPosition) {
+	const mask = ~(1 << bitPosition);
+	return number & mask;
+}
+
+function setBit(number, bitPosition) {
+	return number | (1 << bitPosition);
+}
+
+function updateBit(number, bitPosition, bitValue) {
+	const bitValueNormalized = bitValue ? 1 : 0;
+	const clearMask = ~(1 << bitPosition);
+	return (number & clearMask) | (bitValueNormalized << bitPosition);
+}
+
+function getBit(number, bitPosition) {
+	return (number & (1 << bitPosition)) === 0 ? 0 : 1;
 }
 
 function morton(num1, num2) {
 	console.log(`>>> morton; num1 ${num1} ${num1.toString(2)} num2 ${num2}, ${num2.toString(2)}`);
 	let result = 0;
 	for (let i = 7; i >= 0; i--) {
-		const set1 = isSet(num1, i);
-		const set2 = isSet(num2, i);
-		// console.log(`i ${i} set1 ${set1} set2 ${set2}`);
 		result <<= 1;
-		result += set1;
+		result += getBit(num1, i);
 		result <<= 1;
-		result += set2;
+		result += getBit(num2, i);
 		// console.log(`result ${result}, ${result.toString(2)}`);
 	}
 	console.log(`<<< morton; result ${result}, ${result.toString(2)}`);

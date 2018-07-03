@@ -2,10 +2,30 @@
 
 /* eslint-disable no-plusplus, no-bitwise, no-console, no-restricted-properties */
 
+/*
+node.next references the next node object
+node.value is the value contained by the node
+*/
+
 class LinkedList {
 	constructor() {
 		this.length = 0;
 		this.head = null;
+	}
+
+	middleElement() {
+		const total = this.calculateNodes();
+		return total === 0 ? null : this.get((total - 1) / 2);
+	}
+
+	calculateNodes() {
+		let counter = 0;
+		let node = this.head;
+		while (node != null) {
+			node = node.next;
+			counter++;
+		}
+		return counter;
 	}
 
 	insert(index, value) {
@@ -51,4 +71,18 @@ class LinkedList {
 		}
 		this.length--;
 	}
+
+	load(arr) {
+		arr.forEach((element, idx) => {
+			this.insert(idx, element);
+		});
+	}
+
+	list() {
+		for (let i = 0; i < this.length; i++) {
+			console.log(`value: ${this.get(i)}`);
+		}
+	}
 }
+
+module.exports = LinkedList;

@@ -11,21 +11,24 @@ const LinkedList = require('./linked-list.js');
 function test1() {
 	const linkedList = new LinkedList();
 	linkedList.load(['S', 'A', 'V', 'E', 'D']);
-	console.log(`third from end element ${linkedList.thirdFromEndElement()}`);
+	linkedList.reverse();
+	linkedList.list();
 }
 
 function test1a() {
 	const linkedList = new LinkedList();
 	linkedList.load(['S']);
-	console.log(`third from end element ${linkedList.thirdFromEndElement()}`);
+	linkedList.reverse();
+	linkedList.list();
 }
 
 function test1b() {
 	const linkedList = new LinkedList();
 	linkedList.load([]);
-	console.log(`third from end element ${linkedList.thirdFromEndElement()}`);
+	linkedList.reverse();
+	linkedList.list();
 }
 
 test1();
-test1a();
-test1b();
+// test1a();
+// test1b();

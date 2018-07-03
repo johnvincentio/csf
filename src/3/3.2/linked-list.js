@@ -13,6 +13,31 @@ class LinkedList {
 		this.head = null;
 	}
 
+	reverse() {
+		console.log(`>>> reverse`);
+		this.list();
+		let index = this.length - 1;
+		let pos = 0;
+		while (index >= 0) {
+			const node = this.find(index);
+			const { value } = node;
+			console.log(`index ${index} value ${value}`);
+
+			this.remove(index);
+			console.log(`after remove`);
+			this.list();
+
+			this.insert(pos, value);
+			console.log(`after insert`);
+			this.list();
+
+			pos++;
+			index--;
+		}
+		console.log(`<<< reverse`);
+		this.list();
+	}
+
 	thirdFromEndElement() {
 		const total = this.calculateNodes();
 		return total < 3 ? null : this.get(total - 3);

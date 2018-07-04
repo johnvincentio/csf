@@ -11,6 +11,30 @@ class BinarySearchTree {
 		this.right = null;
 	}
 
+	nodeHeight(obj, counter) {
+		// console.log('level: ', counter + 1, ' key, value ', obj.key, ', ', obj.value);
+		let maxLeft = 0;
+		let maxRight = 0;
+		if (this.key == null) {
+			return counter;
+		}
+		if (obj.left === null && obj.right === null) {
+			return counter + 1;
+		}
+		if (obj.left !== null) {
+			maxLeft = this.nodeHeight(obj.left, counter + 1);
+		}
+		if (obj.right !== null) {
+			maxRight = this.nodeHeight(obj.right, counter + 1);
+		}
+		return maxLeft > maxRight ? maxLeft : maxRight;
+	}
+
+	treeHeight() {
+		const maxHeight = this.nodeHeight(this, 0);
+		console.log('maxHeight ', maxHeight);
+	}
+
 	listNode(obj, counter) {
 		// console.log('listNode; obj ', obj);
 		console.log('level: ', counter + 1, ' key, value ', obj.key, ', ', obj.value);

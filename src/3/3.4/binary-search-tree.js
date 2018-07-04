@@ -1,6 +1,6 @@
 //
 
-/* eslint-disable no-plusplus, no-bitwise, no-console, no-restricted-properties, no-underscore-dangle */
+/* eslint-disable no-plusplus, no-console, no-restricted-properties, no-underscore-dangle, no-param-reassign */
 
 class BinarySearchTree {
 	constructor(key = null, value = null, parent = null) {
@@ -9,6 +9,33 @@ class BinarySearchTree {
 		this.parent = parent;
 		this.left = null;
 		this.right = null;
+	}
+
+	nodeCounter(obj, arr) {
+		// console.log('level: key, value ', obj.key, ', ', obj.value);
+		let countLeft = 0;
+		let countRight = 0;
+		obj.counter = 0; // initialize children counter
+
+		if (obj.key == null) {
+			return 0;
+		}
+		if (obj.left === null && obj.right === null) {
+			arr.push({ key: obj.key, counter: 1 });
+			obj.counter = 1;
+			return 1;
+		}
+		if (obj.left !== null) {
+			countLeft = this.nodeCounter(obj.left, arr);
+		}
+		if (obj.right !== null) {
+			countRight = this.nodeCounter(obj.right, arr);
+		}
+		// console.log('countLeft ', countLeft, ' countRight ', countRight);
+		const total = 1 + countLeft + countRight;
+		obj.counter += total;
+		arr.push({ key: obj.key, counter: obj.counter });
+		return total;
 	}
 
 	insertBrokenTree(key, value) {
@@ -67,7 +94,7 @@ class BinarySearchTree {
 		// console.log('level: ', counter + 1, ' key, value ', obj.key, ', ', obj.value);
 		let maxLeft = 0;
 		let maxRight = 0;
-		if (this.key == null) {
+		if (obj.key == null) {
 			return counter;
 		}
 		if (obj.left === null && obj.right === null) {
@@ -89,7 +116,7 @@ class BinarySearchTree {
 
 	listNode(obj, counter) {
 		// console.log('listNode; obj ', obj);
-		console.log('level: ', counter + 1, ' key, value ', obj.key, ', ', obj.value);
+		console.log('level: ', counter + 1, ' key, value ', obj.key, ', ', obj.value, ' counter ', obj.counter);
 		if (obj.left !== null) {
 			this.listNode(obj.left, counter + 1);
 		}

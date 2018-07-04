@@ -12,17 +12,14 @@ class BinarySearchTree {
 	}
 
 	nodeCounter(obj, arr) {
-		// console.log('level: key, value ', obj.key, ', ', obj.value);
 		let countLeft = 0;
 		let countRight = 0;
-		obj.counter = 0; // initialize children counter
 
 		if (obj.key == null) {
 			return 0;
 		}
 		if (obj.left === null && obj.right === null) {
 			arr.push({ key: obj.key, counter: 1 });
-			obj.counter = 1;
 			return 1;
 		}
 		if (obj.left !== null) {
@@ -31,10 +28,8 @@ class BinarySearchTree {
 		if (obj.right !== null) {
 			countRight = this.nodeCounter(obj.right, arr);
 		}
-		// console.log('countLeft ', countLeft, ' countRight ', countRight);
 		const total = 1 + countLeft + countRight;
-		obj.counter += total;
-		arr.push({ key: obj.key, counter: obj.counter });
+		arr.push({ key: obj.key, counter: total });
 		return total;
 	}
 
@@ -116,7 +111,7 @@ class BinarySearchTree {
 
 	listNode(obj, counter) {
 		// console.log('listNode; obj ', obj);
-		console.log('level: ', counter + 1, ' key, value ', obj.key, ', ', obj.value, ' counter ', obj.counter);
+		console.log('level: ', counter + 1, ' key, value ', obj.key, ', ', obj.value);
 		if (obj.left !== null) {
 			this.listNode(obj.left, counter + 1);
 		}

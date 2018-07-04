@@ -11,6 +11,58 @@ class BinarySearchTree {
 		this.right = null;
 	}
 
+	insertBrokenTree(key, value) {
+		if (this.key == null) {
+			this.key = key;
+			this.value = value;
+		} else if (key > this.key) {
+			// only change, s.b. <
+			if (this.left == null) {
+				this.left = new BinarySearchTree(key, value, this);
+			} else {
+				this.left.insert(key, value);
+			}
+		} else if (this.right == null) {
+			this.right = new BinarySearchTree(key, value, this);
+		} else {
+			this.right.insert(key, value);
+		}
+	}
+
+	checkNode(obj) {
+		let leftValid = true;
+		let rightValid = true;
+		if (obj.key == null) {
+			return true;
+		}
+		if (obj.left === null && obj.right === null) {
+			return true;
+		}
+
+		if (obj.left !== null && obj.left.key > obj.key) {
+			console.error('ERROR; key ', obj.key, ' is > left ', obj.left.key);
+			return false;
+		}
+
+		if (obj.right !== null && obj.right.key < obj.key) {
+			console.error('Error; key ', obj.key, ' is < right ', obj.right.key);
+			return false;
+		}
+
+		if (obj.left !== null) {
+			leftValid = this.checkNode(obj.left);
+		}
+		if (obj.right !== null) {
+			rightValid = this.checkNode(obj.right);
+		}
+		return leftValid && rightValid;
+	}
+
+	checkBinarySearchTree() {
+		const valid = this.checkNode(this);
+		console.log('valid ', valid);
+	}
+
 	nodeHeight(obj, counter) {
 		// console.log('level: ', counter + 1, ' key, value ', obj.key, ', ', obj.value);
 		let maxLeft = 0;

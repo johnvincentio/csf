@@ -11,11 +11,15 @@ Can you express this process as a searching algorithm?
 */
 
 /*
+
 Ask the librarian!
 Search library online catalog.
+
+
 */
 
 /*
+
 It has been a long time since I last looked up a book in a library.
 
 Maybe something like this.

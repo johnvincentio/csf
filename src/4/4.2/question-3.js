@@ -9,6 +9,7 @@ How would you go about it? Can you express this as an algorithm?
 */
 
 /*
+
 Take a book. Place in the middle.
 
 Loop:
@@ -22,6 +23,7 @@ Loop:
 */
 
 /*
+
 Take a book. Place at the start.
 
 Loop:
@@ -37,6 +39,7 @@ Loop:
 /*
 
 bubble sort the array
+
 
 */
 

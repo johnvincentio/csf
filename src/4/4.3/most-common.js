@@ -22,14 +22,12 @@ function mostCommon(par) {
 		if (characterCode < 97 || characterCode > 122) {
 			continue;
 		}
-		console.log('character :', character, ':');
 		if (!(character in characters)) {
 			characters[character] = 1;
 		} else {
 			characters[character]++;
 		}
 	}
-	console.log('characters :', characters, ':');
 
 	let mostCommonCharacter = null;
 	let maxOccurrences = 0;
@@ -43,4 +41,16 @@ function mostCommon(par) {
 	return mostCommonCharacter;
 }
 
-mostCommon(str);
+console.log('Most common letter = ', mostCommon(str));
+
+const myobj = {};
+myobj.w = 3;
+myobj.t = 2;
+myobj.s = 5;
+console.log('myobj ', myobj);
+if (!('a' in myobj)) {
+	console.log('a not found');
+}
+
+myobj.t++;
+console.log('myobj ', myobj);

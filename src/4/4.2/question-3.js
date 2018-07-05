@@ -9,7 +9,6 @@ How would you go about it? Can you express this as an algorithm?
 */
 
 /*
-
 Take a book. Place in the middle.
 
 Loop:
@@ -19,11 +18,9 @@ Loop:
 	else
 		cycle through items to the left, inserting after book is > than current book
 	endif
-
 */
 
 /*
-
 Take a book. Place at the start.
 
 Loop:
@@ -33,14 +30,10 @@ Loop:
 			insert before current book.
 		else
 			append to end
-
 */
 
 /*
-
 bubble sort the array
-
-
 */
 
 const bubbleSort = require('./bubble-sort.js');

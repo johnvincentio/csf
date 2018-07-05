@@ -21,3 +21,5 @@ function bubbleSort(array) {
 	}
 	return array;
 }
+
+exports.sort = array => bubbleSort(array);

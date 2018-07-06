@@ -54,3 +54,7 @@ if (!('a' in myobj)) {
 
 myobj.t++;
 console.log('myobj ', myobj);
+
+for (const chr in myobj) {
+	console.log('chr ', chr);
+}

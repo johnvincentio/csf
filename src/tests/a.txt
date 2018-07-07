@@ -1,0 +1,84 @@
+
+/*
+build a linked list
+
+LinkedList constructor
+Node constructor
+insert
+find
+get
+remove
+
+*/
+
+class LinkedList {
+	constructor() {
+		this.top = null;
+		this.lastIndex = 0;
+
+	}
+	insert(index, value) {
+		// assume index = 0 is first
+		if (index === 0) {
+			const node = { value };
+			this.top = node;
+
+		}
+
+		if (! this.find(index)) {
+
+		}
+
+	}
+	/*
+walk the tree index times, return tyhat node
+	*/
+	find(index) {
+		// check index is valid
+		let node = this.top;
+
+	}
+	get(index) {
+		// check index is valid
+	// find(index);
+		return this.find(index);		// this.find(index).value;
+	}
+
+	remove(index) {
+/*
+find(index)
+if not found, return;
+else
+=> to be removed is node
+
+	prev = node.prev;
+	next = node.next;
+
+	prev.next = next;
+	next.prev = prev;
+
+*/
+	}
+
+	remove(index) {
+		const current = this.find(index);
+		const next = this.find(index+1);		// may not exist, let next = null...
+
+		const previous = this.find(index-1);
+
+		previous.next = next;
+	}
+
+}
+
+const linkedList = new linkedList();
+linkedList.insert(idx, value);
+
+
+
+
+/*
+middle element of a linked list
+*/
+
+
